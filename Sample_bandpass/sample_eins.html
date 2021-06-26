@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>sample_eins</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h2 id="toc_0">Sampling bandpass signals</h2>
+
+<h3 id="toc_1">1.1 Introduction</h3>
+
+<p>It is known [1], [3] that bandpass signals can be sampled with a sampling frequency which is lower than the sampling frequency according to the sampling theorem. </p>
+
+<p>Fig. 1 shows an example of how the spectrum of a bandpass signal sampled with fs (Fig. 1a) arises in the baseband with \(−f_s / 2 ≤ f &lt;f_s / 2\) or \(0 ≤ f &lt;f_s\). The bandpass signal is assumed to have a center frequency \(f_c = (f_{max} + f_{min}) / 2\) and bandwidth \(\Delta f = f_{max} - f_{min}\). The sampling frequency \(f_s\) is less than twice the maximum frequency \(f_c + \Delta f / 2\) and therefore does not meet the requirement of the sampling theorem.</p>
+
+<p>If one assumes the sampling as a multiplication of the bandpass signal with a periodic signal of delta pulses (delta functions) of the period Ts, then the spectrum of the sampled signal in the frequency domain is formed from the convolution of the spectrum of the bandpass signal with a periodic sequence of delta functions of the period \(f_s = 1 / T_s\) [2]. This sequence represents the Fourier transformation of the periodic delta pulses of the period Ts from the time domain (Fig. 1 b).</p>
+
+<p>Convolution with delta functions is very easy. The origin of the frequency zero of the spectrum of the bandpass signal is shifted at the points of the delta functions. The first convolution with the delta function 0 (Fig. 1c) repeats the spectrum of the bandpass signal weighted with \(1 / T_s\) [2]. The weighting is omitted in the illustrations for the sake of simplicity.</p>
+
+<p><img src="Bild_1.png" alt="Fig. 1: Formation of the spectrum of a subsampled bandpass signal
+"></p>
+
+<p>Fig. 1: Formation of the spectrum of a subsampled bandpass signal</p>
+
+<p>The result of the convolution with the delta function −1 is shown in Fig. 1d. Some results of further convolutions are shown in Figs. 1 e, f, g, h. If you add the spectra of all possible convolutions, you get the spectrum from Fig. 1i. This spectrum is periodic and, like all others, extends from \(-\infty\) to \(\infty\).</p>
+
+<p>The spectrum in the baseband is now the spectrum between \(f = 0\) and \(f = f_s\) or between \(f = −f_s / 2\) and \(f = f_s / 2\). In this example, the sampling frequency was chosen so that the partial spectra do not intersect. The original bandpass signal (now time-discrete) can always be reconstructed from the corresponding signal in the baseband. </p>
+
+<p>The inclined roof shape of the original spectrum shows the possible  inversion in the baseband that can occur in the spectra of the undersampled bandpass signal.</p>
+
+<p>It is now clear that the sampling frequency \(f_s\) is to be selected as a function of the parameters \(f_c\) and \(\Delta f\) of the bandpass signal so that the spectra do not intersect (overlap). There are several solutions for \(f_s\) and various diagrams are shown in the literature [1] to facilitate the selection of the sampling frequency.</p>
+
+<p>The representations from Fig. 1 are correct scaled and can be used for an example. With \(f_c = 40\) kHz and \(\Delta f = 4\) kHz one can assume a value of 36 kHz for \(2f_s\) and thus one obtains a value of 18 kHz for \(f_s\). This example will be examined later using MATLAB and Simulink.</p>
+
+<p>The sampling in this form with the much lower sampling frequency is cheaper in terms of efforts.</p>
+
+<h3 id="toc_2">1.2 Undersampling of bandpass signals</h3>
+
+<p>The method for determining the undersampling described in [3] is used here. Fig. 2 shows the spectra for ideal subsampling of a time continuous bandpass signal of bandwidth \(\Delta f\) and center frequency \(f_c\).</p>
+
+<p><img src="Bild_2.png" alt="Fig. 2: Ideal spectra of an undersampled bandpass signal
+"></p>
+
+<p>Fig. 2: Ideal spectra of an undersampled bandpass signal</p>
+
+<p>It is assumed that NZ partial spectra which do not overlap are formed by the undersampling. The number NZ in a first approximation is:</p>
+
+<p>\[ NZ=\frac{f_c + \Delta f/2}{\Delta f} \]</p>
+
+<p>Since \(\Delta f = f_s / 2\), NZ dependent on fs becomes:</p>
+
+<p>\[ NZ=\frac{4f_c + f_s}{2f_s} \]</p>
+
+<p>NZ must be an integer (even or odd). After selecting NZ by rounding, a new corrected sampling frequency is determined with:</p>
+
+<p>\[f_s= \frac{4f_c}{2NZ-1} \]</p>
+
+<p>It must meet the condition \(f_s ≥ 2\Delta f\).</p>
+
+<p>An example should explain the procedure in more detail. The example uses the Illustration from Fig. 1. </p>
+
+<p>For the processing of the result after the subsampling one must have gaps in the partial spectra, especially with regard to the processing with real filters, which always have transition areas. A larger bandwidth is therefore assumed, which then also takes the spaces into account.</p>
+
+<p>Specifically, a bandwidth of \(\Delta f = 8\) kHz and \(f_s = 16\) kHz is assumed. That is 2 kHz each to the left and right of the real bandwidth of 4 kHz. From this it follows a value for NZ of 5.5. With NZ = 5, a corrected sampling frequency is determined. This gives \(f_s = 17.7777\) kHz, which can be rounded to 18 kHz. </p>
+
+<p>Similarly, if you take NZ equal to 6, you get a sampling frequency \(f_s = 14.5455\) kHz and the spectrum in the baseband is inverted. For even values ​​NZ, the spectrum is always inverted in the baseband. It is important that in both cases the partial spectra do not overlap and that sufficient gaps  are created.</p>
+
+<h3 id="toc_3">1.3 Simulation of the undersampling of a bandpass signal</h3>
+
+<p>The simulation is carried out with the Simulink model &#39;subsampling1.slx&#39;, which is initialized and called from the script &#39;subsampling_1.m&#39;. The Simulink model is shown in Fig. 3.</p>
+
+<p>The input source is a random signal (white noise) from the &#39;Band-limited White Noise&#39; block which, with a very high (fnoise = 1e6 Hz) sampling frequency, practically generates continuous noise. Because the parameters of this block &#39;Noise power&#39; and &#39;Sample time&#39; were chosen to be the same, the average power is equal to 1 watt. The spectral power density of the noise signal is therefore 1 / 1e6 or 10*log10 (1e-6) = - 60 dBWatt / Hz.</p>
+
+<p>With two analog filters in the blocks &#39;Transfer Fcn&#39; and &#39;Transfer Fcn1&#39;, the bandpass signal is generated with good attenuation in the stop band. The filters are calculated with the following line in the script:</p>
+
+<p><img src="Bild_3.png" alt="Fig. 3: Simulink model of the subsampling (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)
+"></p>
+
+<p>Fig. 3: Simulink model of the subsampling (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;</p>
+
+<blockquote>
+<p>nord = 6;</p>
+
+<p>dp = 1; % Rippel in the passband in dB</p>
+
+<p>ds = 40; % Attenuation in the stopband in dB</p>
+
+<p>[b,a] = ellip(nord, 1, ds,[fmin, fmax]*2*pi,’s’); % Elliptic filter</p>
+</blockquote>
+
+<p>The bandwidth is limited to 4 kHz by fmax = 42 kHz and fmin = 38 kHz. The center frequency is fc = 40 kHz. In order to determine the possible inversion of the spectrum in the frequency range, a sinusoidal signal with a frequency of 39 kHz near the fmin frequency is added.</p>
+
+<p>The time-continuous signal at the output of the &#39;Add&#39; block is sampled with a sampling frequency of 10fs in the &#39;Zero-Order Hold1&#39; block in order to display its power spectral density with the &#39;Spectrum Analyzer1&#39; block.</p>
+
+<p>Fig. 4 shows the power spectral density that is displayed on this block. You can see the noise signal with a spectral power density of -60 dB Watt / Hz and the spectral power density of the sinusoidal signal with a frequency of 39 kHz. The sampling frequency of fs * 10 for displaying the spectrum of the input signal is chosen so that the spectrum of the bandpass signal with a center frequency of 40 kHz can be seen. The frequency fs = 18 kHz is calculated as shown above for NZ = 5.</p>
+
+<p><img src="Bild_4.png" alt="Fig. 4: Power spectral density of the input signal (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)
+"></p>
+
+<p>Fig. 4: Power spectral density of the input signal (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)</p>
+
+<p>The subsampling is implemented with the &#39;Zero-Order Hold&#39; block. Different sampling frequencies fs can be selected in the script:</p>
+
+<blockquote>
+<p>fs = 18e3;          % NZ = 5;</p>
+
+<p>%fs = 15e3;          % NZ = 6;</p>
+
+<p>%fs = 14.5455e3;      % NZ = 6;</p>
+
+<p>%fs = 17.777e3;      % NZ = 5;</p>
+</blockquote>
+
+<p>The power spectral density after subsampling with fs = 14.5455 kHz is shown with the block &#39;Spectrum Analyzer&#39; and is deplayed in Fig. 5. The power spectral density is retained and the spectrum appears inverted in the frequency range between 0 and fs / 2 = 14.55 / 2 = 7.27 kHz. </p>
+
+<p>With a sampling frequency derived from an odd number NZ, such as 18 kHz, the power spectral density which is shown in Fig. 6 is obtained. Now the spectrum is not inverted in the baseband.</p>
+
+<p><img src="Bild_5.png" alt="Fig. 5: Power spectral density after subsample with fs = 14.5455 kHz (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)
+"></p>
+
+<p>Fig. 5: Power spectral density after subsample with fs = 14.5455 kHz (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)</p>
+
+<p><img src="Bild_6.png" alt="Fig. 6: Power spectral density after subsample with fs = 18 kHz (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)
+"></p>
+
+<p>Fig. 6: Power spectral density after subsample with fs = 18 kHz (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)</p>
+
+<p>In order to display the partial spectra up to the center frequency of 40 kHz, the sampling frequency is increased to fs * 10 with the block &#39;Upsample&#39;. Nine zero values are placed between the samples of the undersampled signal. After amplification by a factor of 10, the signal y is obtained. A section of this signal is shown in Fig. 7.</p>
+
+<p><img src="Bild_7.png" alt="Fig. 7: The subsampled signal after the &#39;Upsample&#39; block (excerpt) (&#39;unterabtastung_1.m&#39;, &#39;unterabtastung1.slx&#39;)
+"></p>
+
+<p>Fig. 7: The subsampled signal after the &#39;Upsample&#39; block (excerpt) (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)</p>
+
+<p>The power spectral density of this signal is shown in Fig. 8. It is shown with the &#39;Spectrum Analyzer2&#39; block and calculated in the script with the following line</p>
+
+<blockquote>
+<p>[Pyy, F] = pwelch (ys, hann (4096), [256], 4096, fs * 10);</p>
+</blockquote>
+
+<p>and then desplayed. The representation corresponds to a section of Fig. 1i.
+The partial spectra that are shown also contain the spectrum of the original signal with a center frequency fc = 40 kHz. This allows the original bandpass signal (now digital) to be reconstructed from this upsampled signal.</p>
+
+<p><img src="Bild_8.png" alt="Fig. 8: Power spectral density of the subsampled signal shown over several periods (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)
+"></p>
+
+<p>Fig. 8: Power spectral density of the subsampled signal shown over several periods (&#39;subsampling_1.m&#39;, &#39;subsampling1.slx&#39;)</p>
+
+<h3 id="toc_4">&#39;1.4 Reconstruction of the bandpass signal from its undersampling</h3>
+
+<p>The reconstruction of the bandpass signal from the undersampled signal of the previous example is examined with the Simulink model &#39;subsampling2.slx&#39; and the script &#39;subsampling_2.m&#39;. The model is shown in Fig. 9.</p>
+
+<p><img src="Bild_9.png" alt="Fig. 9: Simulink model of the reconstruction of the bandpass signal from the subsampled signal (&#39;subsampling_2.m&#39;, &#39;subsampling2.slx&#39;)
+"></p>
+
+<p>Fig. 9: Simulink model of the reconstruction of the bandpass signal from the subsampled signal (&#39;subsampling_2.m&#39;, &#39;subsampling2.slx&#39;)</p>
+
+<p>It is based on the model from Fig. 3 of the previous simulation. From the signal after the upsample and amplification, a digital FIR filter is used to extract the bandpass range at the frequency of 40 kHz (see Fig.
+8). The coefficients of the filter are directly in the block implemented:</p>
+
+<blockquote>
+<p>fir1 (256, [36, 44] * 2e3 / 
+(fs * 10)</p>
+</blockquote>
+
+<p>The power spectral density after the FIR filter is displayed with the Block &#39;Spectrum Analyzer&#39; and is shown in Fig. 10.</p>
+
+<p><img src="Bild_10.png" alt="Fig. 10: Power spectral density of the signal after the FIR filter (&#39;subsampling_2.m&#39;,&#39;subsampling2.slx&#39;)
+"></p>
+
+<p>Fig. 10: Power spectral density of the signal after the FIR filter (&#39;subsampling_2.m&#39;,&#39;subsampling2.slx&#39;)</p>
+
+<p>One can still see the remains of the suppressed partial spectra because of the non ideal filter. The partial spectra are suppressed by approx. 60 dBW / Hz (from -60 to -120 dBW / Hz). The input bandpass signal after the &#39;Add&#39; block is sampled with the &#39;Zero-Order Hold2&#39; block with a frequency fs * 10 and now forms the digital bandpass signal with which the reconstructed signal of the same sampling frequency is compared. For this, it is delayed in the block delay with the delay resulting from the FIR filter.</p>
+
+<p><img src="Bild_11.png" width="500" height="400" /></p>
+
+<p>Fig. 11: Input bandpass signal, reconstructed bandpass signal and their difference (&#39;subsampling_2.m&#39;,&#39;subsampling2.slx&#39;)</p>
+
+<p>With the &#39;Add1&#39; block and &#39;RMS&#39; block, which is parameterized with &#39;Running mean&#39;, the standard deviation of the difference is displayed (here 0.0002634), which is relatively small. The input bandpass signal, the reconstructed bandpass signal and the difference are displayed on the &#39;Scope&#39; block, as shown in the excerpt from Fig. 11.</p>
+
+<h3 id="toc_5">1.5 Reconstruction of the bandpass signal in several stages</h3>
+
+<p>If there is a big difference between the center frequency \(f_c\) and the bandwidth \(\Delta f\), then the partial spectra are very close together after the upsampling and one cannot develop a filter that can extract the spectrum of the desired bandpass signal.</p>
+
+<p>As an example of such a possibility, a reconstruction in two stages for a bandpass signal with a center frequency of 1 MHz and a bandwidth of 100 kHz is described. Fig. 12 shows the Simulink model &#39;subsampling3.slx&#39;, which is initialized and called from the script &#39;subsampling_3.m&#39;.</p>
+
+<p><img src="Bild_12.png" width="500" height="750" /></p>
+
+<p>Fig. 12: Simulink model of the reconstruction of a bandpass signal in two stages (&#39;subsampling_3.m&#39;, &#39;subsampling3.slx&#39;)</p>
+
+<p>The input signal is formed as in the previous example. The two analog filters are developed in the script with the following instruction:</p>
+
+<blockquote>
+<p>[b, a] = ellip (8,1,30, [0.96, 1.04] * 2 * pi * 1e6, ’s’);</p>
+</blockquote>
+
+<p>You can see the desired pass band of the analog bandpass filter from 0.96 MHz to 1.04 MHz and the relatively small attenuation of the stop band of 30 dB. This is the only way to get steep flanks of the amplitude response, which is shown in Fig. 13.</p>
+
+<p><img src="Bild_13.png" width="500" height="350" /></p>
+
+<p>Fig. 13: Amplitude response of the two analog filters (&#39;subsampling_3.m&#39;,&#39;subsampling3.slx&#39;)</p>
+
+<p>The power spectral density of the subsampled signal over several periods is shown in Fig. 14. It is formed with the blocks &#39;Upsample2&#39; and &#39;Gain2&#39; and displayed on the &#39;Spectrum Analyzer1&#39;. This power spectral density is calculated in the script with the following program line:</p>
+
+<blockquote>
+<p>[Pyy, F] = pwelch (ys, hann (4096), [256], 4096, fs * 10);</p>
+</blockquote>
+
+<p>The function pwelch is used, which implements the Welch method [2].</p>
+
+<p><img src="Bild_14.png" width="550" height="350" /></p>
+
+<p>Fig. 14: Power spectral density of the undersampled signal over several periods (&#39;subsampling_3.m&#39;,&#39;subsampling3.slx&#39;)</p>
+
+<p>The representation of this spectral power density in Fig. 14 shows that the spectrum is not inverted in the range from 0 to fs / 2 = 225 kHz (NZ = 5) and that the spectrum of the desired bandpass signal is available at a frequency of 1 MHz. Ones just have to extract it with a bandpass filter, now digitally.
+Upsampling by a factor of 10 is implemented in two stages. So you get larger spaces between the partial spectra and the digital bandpass filters are simpler.</p>
+
+<p>The factor 10 is broken down into two factors 2 and 5. With the &#39;Upsample&#39; block, upsampling with a factor of 2 is first implemented. The power spectral density after this upsampling is shown in Fig. 15.</p>
+
+<p><img src="Bild_15.png" width="500" height="350" /></p>
+
+<p>Fig. 15: Power spectral density after upsampling with a factor of 2 (&#39;subsampling_3.m&#39;,&#39;subsampling3.slx&#39;)</p>
+
+<p>One of the two partial spectra in the range 0 to 2fs / 2 = 450 Hz is suppressed with the FIR filter from the block &#39;Discrete FIR Filter&#39; and the remaining one is then responsible by upsampling to form the partial spectra in which the desired bandpass spectrum is available. </p>
+
+<p>The only question that arises is which part of the spectrum has to be suppressed. The solution here is relatively easy to find through trials, because only two partial spectra are available. Here you have to suppress the partial spectrum between approx. 300 kHz and 400 kHz and thus the coefficients of the FIR filter are calculated with</p>
+
+<blockquote>
+<p>fir1 (256, [0.05,0.15] * 2 / 0.9)</p>
+</blockquote>
+
+<p>for a passband between 50 kHz and 150 kHz.</p>
+
+<p>After the second upsampling with a factor of 5, the partial spectra that also contain the desired bandpass range are extracted with the second FIR filter from block &#39;Discrete FIR Filter1&#39;. To view these partial spectra you only have to connect the &#39;Spectrum Analyzer3&#39; in front of the filter. The filter is direct in the block with</p>
+
+<blockquote>
+<p>fir1 (256, [0.91,1.09] * 2 / 4.5)</p>
+</blockquote>
+
+<p>initialized. It extracts the frequency range of the original input signal between 0.91 MHz and 1.09 MHz, the range slightly larger than the bandwidth of the analog filters.</p>
+
+<p>At the &#39;Scope1&#39; block, the digitized delayeded input signal with the delays due to the filters, the reconstructed signal and their difference are displayed. The standard deviation of the difference is shown on the block &#39;Display&#39; and one can see that it is relatively small.</p>
+
+<p>The reader is advised to sample the same bandpass signal with a frequency of 360 kHz and then to reconstruct it via upsampling in two stages with factors of 2 and 6. After viewing the power spectral densities after downsampling and after the upscanning with factor 12 (2 x 6), you can select the filters passband and parameterize the filter.</p>
+
+<p>A solution is shown with the model &#39;subsampling4.slx&#39;. The model is parameterized directly, without a script. Before starting it, one must develop the coefficients b, a of the analog filter in MATLAB with the help of the instruction given in the model. </p>
+
+<p>The first partial spectrum in the baseband is now inverted (NZ = 6) and the FIR filter of the first stage has to extract the second partial spectrum between 180 kHz and 350 kHz, which is not inverted, so that after the second up-sampling the bandpass signal at 1 MHz is correctly present.</p>
+
+<h3 id="toc_6">REFERENCES</h3>
+
+<p>[1] Richard G. Lyons, “Understanding Digital Signal Processing” 3 Edition, Prentice Hall 2010</p>
+
+<p>[2] Proakis, John G. and Manolakis, Dimitris G.: Digital Signal Proces- sing. Principles, Algorithms and Applications. Prentice Hall, 2006.</p>
+
+<p>[3] Walt Kester: The Data Conversion Handbook. Analog Devices Inc., 2004.</p>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
